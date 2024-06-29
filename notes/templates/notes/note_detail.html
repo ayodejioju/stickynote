@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h2>{{ note.title }}</h2>
+        <p>{{ note.content }}</p>
+        <a href="{% url 'note_edit' note.id %}" class="btn btn-primary">Edit</a>
+        <form method="post" action="{% url 'note_delete' note.id %}" style="display: inline;">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+        <a href="{% url 'note_list' %}" class="btn btn-secondary">Back to List</a>
+    </div>
+{% endblock %}
