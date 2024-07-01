@@ -1,5 +1,3 @@
-# stickynote
-A simple sticky note application
 # Sticky Notes Application
 
 ## Table of Contents
